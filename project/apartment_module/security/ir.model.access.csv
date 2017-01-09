@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_apartment,apartment_user,model_apartment_apartment,base.group_user,1,1,1,1
+access_apartment_contract,apartment_contract_user,model_apartment_contract,base.group_user,1,1,1,1
+access_customer_claim,customer_claim_user,model_customer_claim,base.group_user,1,1,1,1
+access_customer_claim_line,customer_claim_line_user,model_customer_claim_line,base.group_user,1,1,1,1
+access_manager_team_task,manager_team_task_user,model_manager_team_task,base.group_user,1,1,1,1
+access_apartment_portal,apartment_portal,model_apartment_apartment,base.group_portal,1,0,0,0
+access_customer_claim_portal,customer_claim_portal,model_customer_claim,base.group_portal,1,1,1,0
+access_customer_claim_line_portal,customer_claim_line_portal,model_customer_claim_line,base.group_portal,1,1,1,0
+access_manager_task,manager_task,model_manager_task,apartment_module.g_manager,1,1,1,1
+access_manager_team,manager_team_manager,model_manager_team,apartment_module.g_manager,1,1,1,1
+access_public,customer_claim_public,model_customer_claim,base.group_public,1,1,1,0
+access_public,customer_claim_line_public,model_customer_claim_line,base.group_public,1,1,1,0
+access_manager_team_user,manager_team_user,model_manager_team,base.group_user,1,0,0,0
+access_manager_team_portal,manager_team_portal,model_manager_team,base.group_portal,1,0,0,0

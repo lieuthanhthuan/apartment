@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="customer_services_page_link" model="website.menu">
+			<field name="name">Maintenances</field>
+			<field name="url">/maintenance</field>
+			<field name="parent_id" ref="website.main_menu" />
+			<field name="sequence" type="int">99</field>
+		</record>
+
+		<template id="maintenance">
+			<t t-call="website.layout">
+				<t t-set="title">Maintenance</t>
+				<div class="oe_structure">
+					<section class="s_title">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="row">
+										<div clas="col-md-12">
+											<h3 class="text-center" style="color:#0066cc;">GÓP Ý, BÁO HỎNG VÀ BẢO TRÌ
+											</h3>
+										</div>
+									</div>
+									<form action="/claim" class="form-registration">
+										<div clas="col-md-2">
+											<p></p>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<label for="">Nội dung phảm ánh:</label>
+												<textarea name="content" class="form-control" rows="4"
+													required="required"></textarea>
+											</div>
+										</div>
+										<div clas="col-md-2">
+											<p></p>
+										</div>
+										<div class="col-md-12 text-center">
+											<button type="submit" class="btn btn-primary">Send</button>
+										</div>
+									</form>
+									<div>
+										<t t-if="error">
+											<div class="row">
+												<div class="col-md-12">
+													<h4 style="color:red;">Yêu cầu của quý khách đang được xử lý! Vui
+														lòng gửi lại sau ít nhất 2 tiếng. Xin cảm ơn!
+													</h4>
+												</div>
+											</div>
+										</t>
+									</div>
+									<div class="col-md-12 text-left">
+										<h4 style="color:red;">TIẾN ĐỘ XỬ LÝ</h4>
+									</div>
+									<div class="col-md-12">
+										<table class="table table-bordered">
+											<th>Ngày</th>
+											<th>Nội dung phản ánh</th>
+											<th>Hiện trạng xử lý</th>
+											<th>Xem chi tiết</th>
+											<t t-foreach="claims" t-as="claim">
+												<tr>
+													<td>
+														<t t-esc="claim.date" />
+													</td>
+													<td>
+														<t t-esc="claim.name" />
+													</td>
+													<td>
+														<t t-esc="claim.new_status" />
+													</td>
+													<td>
+														<p class="title">
+															<a t-attf-href="/claim/{{ slug(claim) }}">View Detail</a>
+														</p>
+													</td>
+												</tr>
+											</t>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</t>
+		</template>
+
+		<template id="claim_detail">
+			<t t-call="website.layout">
+				<t t-set="title">Claim Detail</t>
+				<div class="oe_structure">
+					<div class="container">
+						<div class="row">
+							<div clas="col-md-12">
+								<h4 class="text-center" style="color: red;">GÓP Ý, BÁO HỎNG VÀ BẢO TRÌ</h4>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="col-md-6">
+										<p>
+											<b>Nội dung góp ý, phản ánh:</b>
+											<span t-esc="claim.name"></span>
+										</p>
+									</div>
+									<div class="col-md-6">
+										<p>
+											<b>Ngày:</b>
+											<span t-esc="claim.date"></span>
+										</p>
+									</div>
+									<div class="col-md-6">
+										<p>
+											<b>Tình trạng giải quyết:</b>
+											<span t-esc="claim.new_status"></span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<h4 style="color: blue;">TIẾN ĐỘ XỬ LÝ</h4>
+							</div>
+							<div class="col-md-12">
+								<table class="table table-bordered">
+									<th>Ngày</th>
+									<th>Nội dung xử lý</th>
+									<t t-foreach="claim.line_ids" t-as="line">
+										<tr>
+											<td>
+												<t t-esc="line.date" />
+											</td>
+											<td>
+												<t t-esc="line.name" />
+											</td>
+										</tr>
+									</t>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</t>
+		</template>
+
+	</data>
+</odoo>

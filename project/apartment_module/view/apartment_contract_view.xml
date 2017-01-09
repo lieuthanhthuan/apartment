@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<!-- Aparment Contract Tree -->
+	<record id="apartment_contract_tree" model="ir.ui.view">
+		<field name="name">apartment.contract.tree</field>
+		<field name="model">apartment.contract</field>
+		<field name="priority">2</field>
+		<field name="arch" type="xml">
+			<tree string="Apartment Contract" colors="red:state in ('draft','inprogress'),blue:state=='done',grey: state='cancel'">
+				<field name="name" />
+				<field name="apartment_id" />
+				<field name="partner_id" />
+				<field name="user_id" />
+				<field name="manager_team_id" />
+				<field name="date_from" />
+				<field name="date_to" />
+				<field name="unit_price" />
+				<field name="uom_unit" />
+				<field name="state" />
+			</tree>
+		</field>
+	</record>
+
+	<!-- Apartment Contract form -->
+	<record id="apartment_contract_form" model="ir.ui.view">
+		<field name="name">apartment.contract.form</field>
+		<field name="model">apartment.contract</field>
+		<field name="arch" type="xml">
+			<form string="Apartment Contract">
+				<header>
+					<button name="action_confirm" states="draft" string="Confirm" class="btn-primary" type="object" />
+					<button name="action_done" states="inprogress" string="Done" class="btn-primary" type="object" />
+					<button name="action_cancel" states="inprogress" string="Cancel" class="o_sale_confirm" type="object" />
+					<button name="action_set_draft" states="cancel" string="Set Draft" class="o_sale_confirm" type="object" />
+					<field name="state" widget="statusbar"/>
+				</header>
+				<sheet>
+					<head>
+						<label for="name"></label>
+						<field name="name" />
+					</head>
+					<group>
+						<group>
+							<field name="apartment_id" domain="[('status', '=', 'free')]"/>
+							<field name="partner_id" />
+							<field name="date_from" />
+							<field name="date_to" />
+						</group>
+						<group>
+							<field name="unit_price" />
+							<field name="uom_unit" />	
+							<field name="description" />
+							<field name="user_id" />
+							<field name="manager_team_id" />
+						</group>
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers" />
+					<field name="message_ids" widget="mail_thread" />
+				</div>
+			</form>
+		</field>
+	</record>
+
+
+	<record id="view_apartment_contract_filter" model="ir.ui.view">
+		<field name="name">apartment.contract.list.select</field>
+		<field name="model">apartment.contract</field>
+		<field name="arch" type="xml">
+			<search string="Apartment Contracts">
+				<field name="name" string="Apartment"
+					filter_domain="['|',('name','ilike',self),('description','ilike',self)]" />
+				<field name="apartment_id" />
+				<field name="partner_id" />
+				<field name="user_id" />
+				<field name="manager_team_id" />
+				<field name="date_from" />
+				<field name="date_to" />
+				<field name="state" />
+				<separator />
+				<filter string="Unread Messages" name="message_needaction"
+					domain="[('message_needaction','=',True)]" />
+				<group expand="0" string="Group By">
+					<filter string="State" domain="[]"
+						context="{'group_by':'state'}" />
+					<filter string="Date From" domain="[]" context="{'group_by':'date_from'}" />
+					<filter string="Date To" domain="[]" context="{'group_by':'date_to'}" />
+					<filter string="User" domain="[]" context="{'group_by':'user_id'}" />
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record id="action_apartment_contracts" model="ir.actions.act_window">
+		<field name="name">Apartment Contracts</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">apartment.contract</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="search_view_id" ref="view_apartment_contract_filter" />
+		<field name="context">{}</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">
+				Create a Apartment Contract, the first step of a new apartment contract management.
+			</p>
+		</field>
+	</record>
+
+</odoo>

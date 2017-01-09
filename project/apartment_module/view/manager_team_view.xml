@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<!-- Manager Team Tree -->
+	<record id="manager_team_tree" model="ir.ui.view">
+		<field name="name">manager.team.tree</field>
+		<field name="model">manager.team</field>
+		<field name="priority">2</field>
+		<field name="arch" type="xml">
+			<tree string="Manager Team">
+				<field name="name" />
+				<field name="user_id" />
+				<field name="company_id" />
+				<field name="manager_id" />
+			</tree>
+		</field>
+	</record>
+
+	<!-- Manager Team form -->
+	<record id="manager_team_form" model="ir.ui.view">
+		<field name="name">manager.team.form</field>
+		<field name="model">manager.team</field>
+		<field name="arch" type="xml">
+			<form string="Manager Team">
+				<sheet>
+					<head>
+						<label for="name"></label>
+						<field name="name" />
+					</head>
+					<group>
+						<group>
+							<field name="type"></field>
+							<field name="manager_id" />
+							<field name="company_id" />
+						</group>
+						<group>
+							<field name="user_id" />
+						</group>
+					</group>
+					<notebook>
+						<page string="Members">
+							<field name="member_ids" widget="many2many_kanban" attrs="{'invisible': [('type', '=', 'super_manager')]}"/>
+							<field name="member2_ids" widget="many2many_kanban" attrs="{'invisible': [('type', '=', 'manager')]}"/>
+						</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers" />
+					<field name="message_ids" widget="mail_thread" />
+				</div>
+			</form>
+		</field>
+	</record>
+
+
+	<record id="view_manager_team_filter" model="ir.ui.view">
+		<field name="name">manager.team.list.select</field>
+		<field name="model">manager.team</field>
+		<field name="arch" type="xml">
+			<search string="Manager Team">
+				<field name="name"/>
+				<field name="user_id" />
+				<field name="company_id" />
+				<separator />
+				<filter string="Unread Messages" name="message_needaction"
+					domain="[('message_needaction','=',True)]" />
+				<group expand="0" string="Group By">
+					<filter string="Company" domain="[]" context="{'group_by':'company_id'}" />
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record id="action_manager_team" model="ir.actions.act_window">
+		<field name="name">Manager Teams</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">manager.team</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="search_view_id" ref="view_manager_team_filter" />
+		<field name="context">{}</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">
+				Create a Manager Team, the first step of a new
+				apartment Manager Team.
+			</p>
+		</field>
+	</record>
+
+</odoo>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="0">
+
+		<record id="action_all_partner" model="ir.actions.act_window">
+			<field name="name">Customers</field>
+			<field name="res_model">res.partner</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="context">{}</field>
+			<field name="auto_search">True</field>
+			<field name="filter">True</field>
+		</record>
+
+		<menuitem name="Apartments" id="apartment_module.apartment_menu" />
+
+		<menuitem name="Apartments" id="apartment_module.apartment"
+			action="apartment_module.action_apartments" parent="apartment_module.apartment_menu"
+			string="Apartment"></menuitem>
+		<menuitem name="Apartments" id="apartment_module.apartment_apartment"
+			action="apartment_module.action_apartments" parent="apartment_module.apartment"
+			string="Apartment"></menuitem>
+		<menuitem name="Customers" action="action_all_partner"
+			parent="apartment_module.apartment"></menuitem>
+		<menuitem name="Contracts" action="apartment_module.action_apartment_contracts"
+			parent="apartment_module.apartment"></menuitem>
+
+		<menuitem name="To Do" id="apartment_module.to_do_menu"
+			parent="apartment_module.apartment_menu"></menuitem>
+		
+		
+		<menuitem name="Customer Claims" parent="apartment_module.to_do_menu"
+			action="apartment_module.action_customer_claim"></menuitem>
+
+		<menuitem name="Group To Do" parent="apartment_module.to_do_menu"
+			action="apartment_module.action_manager_team_task"></menuitem>
+
+		<menuitem name="Manager To Do" parent="apartment_module.to_do_menu"
+			action="apartment_module.action_manager_task"></menuitem>
+
+		<menuitem name="Configurations" id="apartment_setting"
+			parent="apartment_module.apartment_menu"></menuitem>
+		<menuitem name="Manager Team" action="action_manager_team"
+			parent="apartment_setting"></menuitem>
+
+
+	</data>
+</odoo>

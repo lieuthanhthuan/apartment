@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<!-- Manager Team Tree -->
+	<record id="view_customer_claim_tree" model="ir.ui.view">
+		<field name="name">customer.claim.tree</field>
+		<field name="model">customer.claim</field>
+		<field name="priority">2</field>
+		<field name="arch" type="xml">
+			<tree string="Customer Claim"
+				colors="red:state in ('receipted','inprogress'),blue:state=='done',grey: state='cancel'">
+				<field name="date"></field>
+				<field name="name" />
+				<field name="apartment_id"></field>
+				<field name="new_status"></field>
+				<field name="user_id" />
+				<field name="manager_team_id" />
+				<field name="company_id" />
+				<field name="state"></field>
+				<field name="active" invisible="1"></field>
+			</tree>
+		</field>
+	</record>
+
+	<record id="view_customer_claim_calendar" model="ir.ui.view">
+		<field name="name">customer.claim.calendar</field>
+		<field name="model">customer.claim</field>
+		<field name="arch" type="xml">
+			<calendar string="Customer Claim" color="state" date_start="date">
+				<field name="name" />
+				<field name="new_status" />
+			</calendar>
+		</field>
+	</record>
+
+	<!-- Manager Team form -->
+	<record id="view_customer_claim_form" model="ir.ui.view">
+		<field name="name">customer.claim.form</field>
+		<field name="model">customer.claim</field>
+		<field name="arch" type="xml">
+			<form string="Customer Claim">
+				<header>
+					<button name="action_confirm" states="receipted" string="Confirm"
+						class="btn-primary" type="object" />
+					<button name="action_done" states="inprogress" string="Done"
+						class="btn-primary" type="object" />
+					<button name="action_cancel" states="inprogress" string="Cancel"
+						class="o_sale_confirm" type="object" />
+					<button name="action_set_draft" states="cancel" string="Set to Receipted"
+						class="o_sale_confirm" type="object" />
+					<field name="state" widget="statusbar" />
+				</header>
+				<sheet>
+					<head>
+						<label for="name"></label>
+						<field name="name" />
+					</head>
+					<group>
+						<group>
+							<field name="date" />
+							<field name="apartment_id"></field>
+							<field name="new_status"></field>
+							<field name="manager_team_id" />
+						</group>
+						<group>
+							<field name="partner_id" />
+							<field name="user_id" />
+							<field name="company_id" readonly="1" />
+						</group>
+					</group>
+					<notebook>
+						<page string="Lines">
+							<field name="line_ids">
+								<tree string="Progress" editable="buttom">
+									<field name="date"></field>
+									<field name="name"></field>
+								</tree>
+							</field>
+						</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers" />
+					<field name="message_ids" widget="mail_thread" />
+				</div>
+			</form>
+		</field>
+	</record>
+
+
+	<record id="view_customer_claim_filter" model="ir.ui.view">
+		<field name="name">customer.claim.list.select</field>
+		<field name="model">customer.claim</field>
+		<field name="arch" type="xml">
+			<search string="Customer Claim">
+				<field name="name" />
+				<field name="apartment_id"></field>
+				<field name="date" />
+				<field name="user_id" />
+				<field name="manager_team_id" />
+				<field name="company_id" />
+				<separator />
+				<filter string="Unread Messages" name="message_needaction"
+					domain="[('message_needaction','=',True)]" />
+				<filter name="to_do" string="To Do"
+					domain="[('state','in',['receipted','inprogress'])]" />
+				<filter name="to_done" string="Done" domain="[('state','=','done')]" />
+				<filter name="to_cancel" string="Cancelled" domain="[('state','=','cancel')]" />
+				<group expand="0" string="Group By">
+					<filter string="State" domain="[]" context="{'group_by':'state'}" />
+					<filter string="Apartment" domain="[]"
+						context="{'group_by':'apartment_id'}" />
+					<filter name="manager_team" string="Manager Team" domain="[]"
+						context="{'group_by':'manager_team_id'}" />
+					<filter string="User" domain="[]" context="{'group_by':'user_id'}" />
+					<filter name="by_date" string="Date" domain="[]"
+						context="{'group_by':'date'}" />
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record id="action_customer_claim" model="ir.actions.act_window">
+		<field name="name">Customer Claim</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">customer.claim</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form,calendar</field>
+		<field name="search_view_id" ref="view_customer_claim_filter" />
+		<field name="context">{'search_default_manager_team':1,'search_default_to_do':1,
+			'search_default_by_date':1,}
+		</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">
+				Create a Customer Claim, the first step of a new
+				Customer
+				Claim.
+			</p>
+		</field>
+	</record>
+
+</odoo>

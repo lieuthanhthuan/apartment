@@ -1,0 +1,671 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* apartment_module
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-08 15:01+0000\n"
+"PO-Revision-Date: 2017-01-08 15:01+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: apartment_module
+#: model:ir.model,name:apartment_module.model_apartment_contract
+msgid " Apartment Contract"
+msgstr " Hợp đồng thuê nhà"
+
+#. module: apartment_module
+#: model:ir.model,name:apartment_module.model_apartment_apartment
+msgid " Apartment Management"
+msgstr " Quản lý căn hộ"
+
+#. module: apartment_module
+#: model:ir.model,name:apartment_module.model_customer_claim
+#: model:ir.model,name:apartment_module.model_manager_task
+msgid " Customer Claims"
+msgstr " Khách hàng phả ánh"
+
+#. module: apartment_module
+#: model:ir.model,name:apartment_module.model_customer_claim_line
+msgid " Customer Claims Lines"
+msgstr " Xử lý phản ánh"
+
+#. module: apartment_module
+#: model:ir.model,name:apartment_module.model_manager_team
+msgid " Manager Team"
+msgstr " Bản quản lý"
+
+#. module: apartment_module
+#: model:ir.model,name:apartment_module.model_manager_team_task
+msgid " Manager Team Tasks"
+msgstr " Nhiệm vụ ban quản lý"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.claim_detail
+msgid "<b>Ngày:</b>"
+msgstr "<b>Ngày:</b>"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.claim_detail
+msgid "<b>Nội dung góp ý, phản ánh:</b>"
+msgstr "<b>Nội dung góp ý, phản ánh:</b>"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.claim_detail
+msgid "<b>Tình trạng giải quyết:</b>"
+msgstr "<b>Tình trạng giải quyết:</b>"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_active
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_line_active
+#: model:ir.model.fields,field_description:apartment_module.field_manager_task_active
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_task_active
+msgid "Active"
+msgstr "Có hiệu lực"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_apartment_address
+msgid "Address"
+msgstr "Địa chỉ"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_apartment_name
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_contract_apartment_id
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_apartment_id
+#: model:ir.model.fields,field_description:apartment_module.field_manager_task_apartment_id
+#: model:ir.ui.view,arch_db:apartment_module.view_apartment_apartment_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_apartment_contract_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_customer_claim_filter
+msgid "Apartment"
+msgstr "Căn hộ"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.apartment_contract_form
+#: model:ir.ui.view,arch_db:apartment_module.apartment_contract_tree
+msgid "Apartment Contract"
+msgstr "Hợp đồng thuê căn hộ"
+
+#. module: apartment_module
+#: model:ir.actions.act_window,name:apartment_module.action_apartment_contracts
+#: model:ir.ui.view,arch_db:apartment_module.view_apartment_contract_filter
+msgid "Apartment Contracts"
+msgstr "Hợp đồng thuê căn hộ"
+
+#. module: apartment_module
+#: model:ir.actions.act_window,name:apartment_module.action_apartments
+#: model:ir.module.category,name:apartment_module.module_category_apartment
+#: model:ir.ui.menu,name:apartment_module.apartment
+#: model:ir.ui.menu,name:apartment_module.apartment_apartment
+#: model:ir.ui.menu,name:apartment_module.apartment_menu
+#: model:ir.ui.view,arch_db:apartment_module.apartment_apartment_form
+#: model:ir.ui.view,arch_db:apartment_module.apartment_apartment_tree
+#: model:ir.ui.view,arch_db:apartment_module.view_apartment_apartment_filter
+msgid "Apartments"
+msgstr "Căn hộ"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_apartment_area
+msgid "Area"
+msgstr "Diện tích"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.apartment_contract_form
+#: model:ir.ui.view,arch_db:apartment_module.view_customer_claim_form
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_task_form
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_task_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: apartment_module
+#: selection:apartment.contract,state:0
+#: selection:customer.claim,state:0
+#: model:ir.ui.view,arch_db:apartment_module.view_customer_claim_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_task_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_task_filter
+#: selection:manager.task,state:0
+#: selection:manager.team.task,state:0
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.claim_detail
+msgid "Claim Detail"
+msgstr "Chi tiết phản ảnh"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_company_id
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_line_company_id
+#: model:ir.model.fields,field_description:apartment_module.field_manager_task_company_id
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_company_id
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_task_company_id
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_filter
+msgid "Company"
+msgstr "Công ty"
+
+#. module: apartment_module
+#: model:ir.ui.menu,name:apartment_module.apartment_setting
+msgid "Configurations"
+msgstr "Thiết lập"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.apartment_contract_form
+#: model:ir.ui.view,arch_db:apartment_module.view_customer_claim_form
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_task_form
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_task_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_line_name
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_name
+#: model:ir.model.fields,field_description:apartment_module.field_manager_task_name
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_task_name
+msgid "Content"
+msgstr "Nội dung"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_contract_name
+msgid "Contract Name"
+msgstr "Hợp đồng số"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_apartment_contract_ids
+msgid "Contracts"
+msgstr "Hợp đồng"
+
+#. module: apartment_module
+#: model:ir.actions.act_window,help:apartment_module.action_apartment_contracts
+msgid "Create a Apartment Contract, the first step of a new apartment contract management."
+msgstr "Tạo mới hợp đồng, giúp quản lý hợp đồng thuê nhà giữa ban quản lý tòa nhà và khách hàng."
+
+#. module: apartment_module
+#: model:ir.actions.act_window,help:apartment_module.action_apartments
+msgid "Create a Apartment, the first step of a new apartment management."
+msgstr "Tạo mới căn hộ, giúp người dùng quản lý thông tin của căn hộ."
+
+#. module: apartment_module
+#: model:ir.actions.act_window,help:apartment_module.action_customer_claim
+msgid "Create a Customer Claim, the first step of a new\n"
+"				Customer\n"
+"				Claim."
+msgstr "Tạo mới thông tin phản ánh, báo hỏng của khách hàng, tạo mới thông tin phản ánh\n"
+"				của khách hàng\n"
+"				."
+
+#. module: apartment_module
+#: model:ir.actions.act_window,help:apartment_module.action_manager_team
+msgid "Create a Manager Team, the first step of a new\n"
+"				apartment Manager Team."
+msgstr "Tạo mới ban quản lý và ban quản trị, bước đầu tien tạo mới\n"
+"				ban quản trị hoặc ban quản lý."
+
+#. module: apartment_module
+#: model:ir.actions.act_window,help:apartment_module.action_manager_task
+msgid "Create a Task to do, the first step of a new task To Do."
+msgstr "Tạo mới việc cần làm, bước đầu tiên tạo mới việc cần làm."
+
+#. module: apartment_module
+#: model:ir.actions.act_window,help:apartment_module.action_manager_team_task
+msgid "Create a Task to do, the first step of a new task to do."
+msgstr "Tạo mới việc cần làm cho ban quản trị."
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_apartment_create_uid
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_contract_create_uid
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_create_uid
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_line_create_uid
+#: model:ir.model.fields,field_description:apartment_module.field_manager_task_create_uid
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_create_uid
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_task_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_apartment_create_date
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_contract_create_date
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_create_date
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_line_create_date
+#: model:ir.model.fields,field_description:apartment_module.field_manager_task_create_date
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_create_date
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_task_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_contract_partner_id
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_partner_id
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: apartment_module
+#: model:ir.actions.act_window,name:apartment_module.action_customer_claim
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_line_customer_claim_id
+#: model:ir.ui.view,arch_db:apartment_module.view_customer_claim_calendar
+#: model:ir.ui.view,arch_db:apartment_module.view_customer_claim_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_customer_claim_form
+#: model:ir.ui.view,arch_db:apartment_module.view_customer_claim_tree
+msgid "Customer Claim"
+msgstr "Phản ánh khách hàng"
+
+#. module: apartment_module
+#: model:ir.actions.act_window,name:apartment_module.action_all_partner
+msgid "Customers"
+msgstr "Khách hàng"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_date
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_line_date
+#: model:ir.model.fields,field_description:apartment_module.field_manager_task_date
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_task_date
+#: model:ir.ui.view,arch_db:apartment_module.view_customer_claim_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_task_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_task_filter
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_contract_date_from
+#: model:ir.ui.view,arch_db:apartment_module.view_apartment_contract_filter
+msgid "Date From"
+msgstr "Từ ngày"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_contract_date_to
+#: model:ir.ui.view,arch_db:apartment_module.view_apartment_contract_filter
+msgid "Date To"
+msgstr "Đến ngày"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_apartment_description
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_contract_description
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_apartment_display_name
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_contract_display_name
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_display_name
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_line_display_name
+#: model:ir.model.fields,field_description:apartment_module.field_manager_task_display_name
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_display_name
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_task_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: apartment_module
+#: selection:apartment.contract,state:0
+#: model:ir.ui.view,arch_db:apartment_module.apartment_contract_form
+#: model:ir.ui.view,arch_db:apartment_module.view_customer_claim_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_customer_claim_form
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_task_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_task_form
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_task_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_task_form
+msgid "Done"
+msgstr "Done"
+
+#. module: apartment_module
+#: selection:apartment.contract,state:0
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: apartment_module
+#: selection:apartment.apartment,status:0
+msgid "Free"
+msgstr "Còn trống"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.view_apartment_apartment_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_apartment_contract_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_customer_claim_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_task_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_task_filter
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.claim_detail
+#: model:ir.ui.view,arch_db:apartment_module.maintenance
+msgid "GÓP Ý, BÁO HỎNG VÀ BẢO TRÌ"
+msgstr "GÓP Ý, BÁO HỎNG VÀ BẢO TRÌ"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.maintenance
+msgid "Hiện trạng xử lý"
+msgstr "Hiện trạng xử lý"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_apartment_id
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_contract_id
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_id
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_line_id
+#: model:ir.model.fields,field_description:apartment_module.field_manager_task_id
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_id
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_task_id
+msgid "ID"
+msgstr "ID"
+
+#. module: apartment_module
+#: selection:apartment.apartment,status:0
+#: selection:apartment.contract,state:0
+#: selection:customer.claim,state:0
+#: selection:manager.task,state:0
+#: selection:manager.team.task,state:0
+msgid "Inprogress"
+msgstr "Đang thực hiện"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_apartment___last_update
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_contract___last_update
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim___last_update
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_line___last_update
+#: model:ir.model.fields,field_description:apartment_module.field_manager_task___last_update
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team___last_update
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_task___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_apartment_write_uid
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_contract_write_uid
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_line_write_uid
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_write_uid
+#: model:ir.model.fields,field_description:apartment_module.field_manager_task_write_uid
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_task_write_uid
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_apartment_write_date
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_contract_write_date
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_line_write_date
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_write_date
+#: model:ir.model.fields,field_description:apartment_module.field_manager_task_write_date
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_task_write_date
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_line_ids
+#: model:ir.model.fields,field_description:apartment_module.field_manager_task_line_ids
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_task_line_ids
+#: model:ir.ui.view,arch_db:apartment_module.view_customer_claim_form
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_task_form
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_task_form
+msgid "Lines"
+msgstr "Các bước xử lý"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_res_partner_related_user
+#: model:ir.model.fields,field_description:apartment_module.field_res_users_related_user
+msgid "Login Account"
+msgstr "Tài khoản đăng nhập"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.maintenance
+msgid "Maintenance"
+msgstr "Báo hỏng"
+
+#. module: apartment_module
+#: model:website.menu,name:apartment_module.customer_services_page_link
+msgid "Maintenances"
+msgstr "Bảo trì"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_manager_id
+msgid "Manager"
+msgstr "Ban quản lý"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_line_manager_task_id
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_task_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_task_form
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_task_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_task_form
+msgid "Manager Task"
+msgstr "Nhiệm vụ ban quản lý"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_apartment_manager_team_id
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_contract_manager_team_id
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_line_manager_team_id
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_manager_team_id
+#: model:ir.model.fields,field_description:apartment_module.field_manager_task_manager_team_id
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_task_manager_team_id
+#: model:ir.model.fields,field_description:apartment_module.field_res_partner_manager_team_id
+#: model:ir.model.fields,field_description:apartment_module.field_res_users_manager_team_id
+#: model:ir.ui.view,arch_db:apartment_module.manager_team_form
+#: model:ir.ui.view,arch_db:apartment_module.manager_team_tree
+#: model:ir.ui.view,arch_db:apartment_module.view_customer_claim_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_task_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_task_filter
+#: model:res.groups,name:apartment_module.g_user
+msgid "Manager Team"
+msgstr "Ban quản trị"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_line_manager_team_task_id
+msgid "Manager Team Task"
+msgstr "Nhiệm vụ ban quản trị"
+
+#. module: apartment_module
+#: model:ir.actions.act_window,name:apartment_module.action_manager_team
+msgid "Manager Teams"
+msgstr "Ban quản lý"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_task_calendar
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_task_calendar
+msgid "Manager To Do"
+msgstr "Nhiệm vụ Ban quản lý"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_member_ids
+#: model:ir.ui.view,arch_db:apartment_module.manager_team_form
+msgid "Members"
+msgstr "Thành viên"
+
+#. module: apartment_module
+#: selection:apartment.contract,uom_unit:0
+msgid "Month"
+msgstr "Tháng"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_new_status
+#: model:ir.model.fields,field_description:apartment_module.field_manager_task_new_status
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_task_new_status
+msgid "New Status"
+msgstr "hoạt động mới nhất"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.claim_detail
+#: model:ir.ui.view,arch_db:apartment_module.maintenance
+msgid "Ngày"
+msgstr "Ngày"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.maintenance
+msgid "Nội dung phảm ánh:"
+msgstr "Nội dung phảm ánh:"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.maintenance
+msgid "Nội dung phản ánh"
+msgstr "Nội dung phản ánh"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.claim_detail
+msgid "Nội dung xử lý"
+msgstr "Nội dung xử lý"
+
+#. module: apartment_module
+#: model:ir.model,name:apartment_module.model_res_partner
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.view_customer_claim_form
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_task_form
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_task_form
+msgid "Progress"
+msgstr "Đang thực hiện"
+
+#. module: apartment_module
+#: selection:customer.claim,state:0
+#: selection:manager.task,state:0
+#: selection:manager.team.task,state:0
+msgid "Receipted"
+msgstr "Đã tiếp nhận"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.maintenance
+msgid "Send"
+msgstr "Gửi"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.apartment_contract_form
+msgid "Set Draft"
+msgstr "Trả về nháp"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.view_customer_claim_form
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_task_form
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_task_form
+msgid "Set to Receipted"
+msgstr "Trả về tiếp nhận"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.view_apartment_contract_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_customer_claim_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_task_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_task_filter
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_apartment_status
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_contract_state
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_state
+#: model:ir.model.fields,field_description:apartment_module.field_manager_task_state
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_task_state
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: apartment_module
+#: model:res.groups,name:apartment_module.g_manager
+msgid "Super Manager"
+msgstr "Ban quản lý"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.claim_detail
+#: model:ir.ui.view,arch_db:apartment_module.maintenance
+msgid "TIẾN ĐỘ XỬ LÝ"
+msgstr "TIẾN ĐỘ XỬ LÝ"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_task_tree
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_task_tree
+msgid "Task"
+msgstr "Nhiệm vụ"
+
+#. module: apartment_module
+#: model:ir.actions.act_window,name:apartment_module.action_manager_task
+#: model:ir.actions.act_window,name:apartment_module.action_manager_team_task
+msgid "Task To Do"
+msgstr "Nhiệm vụ"
+
+#. module: apartment_module
+#: model:ir.ui.menu,name:apartment_module.to_do_menu
+#: model:ir.ui.view,arch_db:apartment_module.view_customer_claim_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_task_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_task_filter
+msgid "To Do"
+msgstr "Cần làm"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_contract_unit_price
+msgid "Unit price"
+msgstr "Giá cho thuê"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.view_apartment_apartment_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_apartment_contract_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_customer_claim_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_task_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_task_filter
+msgid "Unread Messages"
+msgstr "Tin nhắn chưa được"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_contract_uom_unit
+msgid "Uom"
+msgstr "Đơn vị"
+
+#. module: apartment_module
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_apartment_user_id
+#: model:ir.model.fields,field_description:apartment_module.field_apartment_contract_user_id
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_line_user_id
+#: model:ir.model.fields,field_description:apartment_module.field_customer_claim_user_id
+#: model:ir.model.fields,field_description:apartment_module.field_manager_task_user_id
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_task_user_id
+#: model:ir.model.fields,field_description:apartment_module.field_manager_team_user_id
+#: model:ir.model.fields,field_description:apartment_module.field_res_partner_user_create_id
+#: model:ir.model.fields,field_description:apartment_module.field_res_users_user_create_id
+#: model:ir.ui.view,arch_db:apartment_module.view_apartment_apartment_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_apartment_contract_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_customer_claim_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_task_filter
+#: model:ir.ui.view,arch_db:apartment_module.view_manager_team_task_filter
+msgid "User"
+msgstr "Người dùng"
+
+#. module: apartment_module
+#: model:ir.model,name:apartment_module.model_res_users
+msgid "Users"
+msgstr "Người dùng"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.maintenance
+msgid "View Detail"
+msgstr "Xem chi tiết"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.maintenance
+msgid "Xem chi tiết"
+msgstr "Xem chi tiết"
+
+#. module: apartment_module
+#: selection:apartment.contract,uom_unit:0
+msgid "Year"
+msgstr "Năm"
+
+#. module: apartment_module
+#: model:ir.ui.view,arch_db:apartment_module.maintenance
+msgid "Yêu cầu của quý khách đang được xử lý! Vui\n"
+"														lòng gửi lại sau ít nhất 2 tiếng. Xin cảm ơn!"
+msgstr "Yêu cầu của quý khách đang được xử lý! Vui\n"
+"														lòng gửi lại sau ít nhất 2 tiếng. Xin cảm ơn!"
+
+#. module: apartment_module
+#: selection:customer.claim,state:0
+#: selection:manager.task,state:0
+#: selection:manager.team.task,state:0
+msgid "done"
+msgstr "Hoàn thành"
+
